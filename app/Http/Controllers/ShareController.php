@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\DateCheck;
 use App\Share;
+use DateService;
 
 class ShareController extends Controller
 {
@@ -14,9 +16,16 @@ class ShareController extends Controller
      */
     public function index()
     {
-        $shares = Share::all();
+//        $shares = Share::all();
+//
+//        return view('shares.index', compact('shares'));
 
-        return view('shares.index', compact('shares'));
+//        $ext = new DateCheck();
+
+        dump(DateService::isValid('11/11/2291'));
+
+        return view('welcome');
+
     }
 
     /**

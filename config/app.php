@@ -160,6 +160,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+        // new service provider
+        App\Providers\DateCheckServiceProvider::class,
+
+
     ],
 
     /*
@@ -208,6 +213,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        // new service provider
+        'DateService' => App\Facades\DateService::class,
 
     ],
 
